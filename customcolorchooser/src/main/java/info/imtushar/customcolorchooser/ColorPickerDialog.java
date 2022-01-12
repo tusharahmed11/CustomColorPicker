@@ -243,11 +243,14 @@ public class ColorPickerDialog extends Dialog {
             @Override
             public void onPicked(int opacity) {
                 //System.out.println("Opacity: " + opacity);
-                ColorDrawable colorDrawable = (ColorDrawable) colorPreviewBox.getBackground();
+                /*ColorDrawable colorDrawable = (ColorDrawable) colorPreviewBox.getBackground();
                 if (colorDrawable == null)
                     return;
 
-                int color = colorDrawable.getColor();
+                int color = colorDrawable.getColor();*/
+
+                int color = colorPreviewBox.getCardBackgroundColor().getDefaultColor();
+
                 refreshPreviewBox(color, opacity, opacityPicker.isCanUpdateHexVal());
                 opacityPicker.setCanUpdateHexVal(true);
             }
