@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CustomColorPicker" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="ColorPicker">
+        <item name="cp_showOpacityBar">true</item>
+        <item name="cp_showHexaDecimalValue">true</item>
+        <item name="cp_showColorComponentsInfo">true</item>
+    </style>
+
+    <style name="ColorPicker.Light" parent="Base.Theme.AppCompat.Light.Dialog">
+        <item name="cp_backgroundColor">#eee</item>
+        <item name="cp_hexaDecimalTextColor">#312e92</item>
+        <item name="cp_colorComponentsTextColor">#444</item>
+        <item name="cp_positiveActionTextColor">#44bc3b</item>
+        <item name="cp_negativeActionTextColor">#ff4545</item>
+        <item name="cp_sliderThumbColor">#333</item>
+    </style>
+
+    <style name="ColorPicker.Dark" parent="Base.Theme.AppCompat.Light.Dialog">
+        <item name="cp_backgroundColor">#222</item>
+        <item name="cp_hexaDecimalTextColor">#ff0</item>
+        <item name="cp_colorComponentsTextColor">#fff</item>
+        <item name="cp_positiveActionTextColor">#63e55c</item>
+        <item name="cp_negativeActionTextColor">#ff4545</item>
+        <item name="cp_sliderThumbColor">#ddd</item>
+    </style>
+</resources>
