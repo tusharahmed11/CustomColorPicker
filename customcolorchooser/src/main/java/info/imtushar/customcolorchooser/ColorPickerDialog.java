@@ -8,6 +8,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,8 +57,8 @@ public class ColorPickerDialog extends Dialog {
     private int initColor;
     private boolean skipHexValChange=false;
 
-    private int mColor= Color.parseColor("#ffffffff");
-    private String mHexVal="#ffffffff";
+    private int mColor= Color.parseColor("#ffffff");
+    private String mHexVal="#ffffff";
 
     private OnColorPickedListener onColorPickedListener;
     private OnClosedListener onClosedListener;
@@ -421,11 +422,11 @@ public class ColorPickerDialog extends Dialog {
     }
 
     private void refreshPreviewBox(int color,int opacity,boolean updateHexVal){
-        color= Color.argb(opacity, Color.red(color), Color.green(color), Color.blue(color));
+        color= Color.rgb(Color.red(color), Color.green(color), Color.blue(color));
         colorPreviewBox.setCardBackgroundColor(color);
+        mHexVal="#"+Integer.toHexString(color).substring(2);
 
-        mHexVal="#"+Integer.toHexString(color);
-
+        Log.d("refreshPreviewBox", "refreshPreviewBox: "+mHexVal+ "color: "+color);
         //System.out.println("Retrieved Color: " + color + " (#" + mHexVal + ")");
 
         mColor=color;
